@@ -13,8 +13,15 @@ ul, ol, li{
     list-style: none;
 }
 
+:root{
+    --primary-color: #F07807;
+    --secundary-color: #FBDDC1;
+    --default-shadow: 0 4px 4px #0004;
+}
+
 body{
     padding: 0px 80px;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -23,12 +30,47 @@ header{
     width: calc(100% - 160px);
     position: fixed;
     top: 60px;
-    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+header li{
+    padding: 4px 8px;
+    transition: .5s;
+
+}
+
+header li:hover{
+    background-color: var(--secundary-color);
+    box-shadow: var(--default-shadow);
+}
+
+header button{
+    height: 48px; 
+    width: 120px;
+    background-color: var(--secundary-color);
+    border-radius: 12px;
+    border: none;
+    box-shadow: var(--default-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 800;
+    color: var(--primary-color)
 }
 
 main{
     height: 700px; /*Temporario*/
-    background-color: tomato;
+    background-color: lightblue;
 }
 
 footer{
